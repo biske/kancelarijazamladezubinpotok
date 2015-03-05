@@ -4,3 +4,23 @@
 
 Адреса:
 https://kancelarijazamladezubinpotok.herokuapp.com
+
+== Подешавање
+
+=== Клонирање
+
+git clone git@github.com:biske/kancelarijazamladezubinpotok.git
+
+=== Подешавање базе
+
+Преименовати config/initializers/local.rb.example у config/initializers/local.rb и подесити одговарајуће параметре
+
+Покренути команду:
+
+bin/rake db:create db:migrate
+
+# Покретање апликације
+
+bin/rails s
+
+Апликација је доступна на адреси http://localhost:3000

@@ -1,0 +1,4 @@
+if Rails.env.development? || Rails.env.test?
+  ENV['DATABASE_USERNAME'] = 'truc'
+  ENV['DATABASE_PASSWORD'] = 'trac'
+end
