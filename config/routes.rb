@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'static_pages#test'
+  get 'kontakt', to: 'static_pages#kontakt'
+  root to: 'static_pages#naslovna'
 end
