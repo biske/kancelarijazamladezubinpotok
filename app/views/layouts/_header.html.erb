@@ -67,7 +67,12 @@
                 Насловна
               <% end %>
               </li>
-              <li><a href="#" title="Informacije o nama"><span class="glyphicon glyphicon-user hidden-md hidden-sm"></span> Канцеларија</a></li>
+              <li>
+              <%= link_to o_nama_path do %>
+                <span class="glyphicon glyphicon-user hidden-md hidden-sm"></span>
+                О нама
+              <% end %>
+              </li>
               <li><a href="#" title="Vesti"><span class="glyphicon glyphicon-info-sign hidden-md hidden-sm"></span> Вести</a></li>
               <li><a href="#" title="Zanimljivosti"><span class="glyphicon glyphicon-play-circle hidden-md hidden-sm"></span> Занимљивости</a></li>
               <li><a href="#" title="Konkursi"><span class="glyphicon glyphicon-pencil hidden-md hidden-sm"></span> Конкурси</a></li>
