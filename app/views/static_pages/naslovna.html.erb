@@ -327,13 +327,17 @@
         <div class="col-lg-8 col-md-8 col-sm-8">
           <div id="map-canvas"></div>
         </div>
+        <%= render 'shared/map' %>
+
         <div class="col-lg-4 col-md-4 col-sm-4 location">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h1><a href="kontakt.html" title="Пронађите нас на мапи">Где се налазимо</a></h1>
+              <h1>
+                <%= link_to "Где се налазимо", kontakt_path %>
+              </h1>
             </div>
             <div class="panel-body">
-              <p>Колашинских кнежева 25</p>
+              <p>Колашинских кнежева 27</p>
               <p>38228 Зубин Поток</p>
               <p>Косово и Метохија</p>
             </div>
