@@ -1,0 +1,66 @@
+body {
+	padding-top: 50px;
+}
+.row {
+	margin: 0;
+}
+
+/* ===== logo ===== */
+.logo {
+	margin-left: -15px;
+	padding-right: 0;
+}
+.navbar-brand {
+	padding: 0;
+	font-weight: bold;
+}
+
+/* ===== horizontal menu ===== */
+.right-menu {
+	padding: 0;
+}
+.navbar-collapse {
+	padding-right: 0;
+}
+.navbar-form {
+	border: none;
+	padding: 0;
+}
+.form-control {
+	background: url(image-path('search-icon.png')) no-repeat 95% center;
+}
+
+/* ===== side (vertical) menu ===== */
+#side-menu {
+	padding-right: 0;
+}
+#vertical-menu {
+	margin-left: -30px;
+}
+.nav-pills>li>a {
+	border-radius: 0;
+}
+
+/* ===== main-content ===== */
+#content {
+}
+/* ===== add button===== */
+.add-news:hover {
+	text-decoration: none;
+}
+
+/* --------- media queries --------- */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    
+}/* end of tablets styles */
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}/* end of desktops styles */
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}/* end of large desktops styles */
