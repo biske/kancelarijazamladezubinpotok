@@ -19,17 +19,16 @@ h2 a:hover,
 h3 a:hover {
     text-decoration: none;
 }
-.btn-default {
-
-}
-.btn-default:hover {
-
+.btn-danger {
+    background-color: #d2322d;
 }
 
 /* --------- top-header --------- */
 .top-header {
     height: 50px;
     font-size: 12px;
+    background-color: #0084c4;
+    color: #fff;
 }
 .top-header p {
     margin-bottom: 0;
@@ -47,7 +46,13 @@ h3 a:hover {
 .input-group-btn .btn-default {
     background-color: transparent;
     border: 1px solid #fff;
+    color: #fff;
 }
+.form-control::-webkit-input-placeholder { color: white; }
+.form-control:-moz-placeholder { color: white; }
+.form-control::-moz-placeholder { color: white; }
+.form-control:-ms-input-placeholder { color: white; }
+
 .form-control:focus {
     color: #fff;
     border: 1px solid #fff;
@@ -69,11 +74,11 @@ h3 a:hover {
 }
 /* --------- nav --------- */
 .menu {
-    
+    background-color: #0084c4;
 }
 header .nav a,
 .nav-tabs a {
-    color: #000;
+    color: #fff;
     font-size: 15px;
 }
 .nav>li>a {
@@ -82,12 +87,40 @@ header .nav a,
 .nav {
     text-transform: uppercase;
 }
-
+.nav>li>a::after {
+    background: #fff;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 5px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+}
+.nav>li>a:hover::after {
+    background: #fff;
+    opacity: 1;
+    transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: #0084c5;
+}
 /* --------- banner --------- */
 .jumbotron {
     padding-top: 148px;
     padding-bottom: 68px;
     max-height: 550px;
+    background: url(../images/jumbo.jpg) no-repeat 100%;
+    color: #000;
 }
 /* --------- main-mssg --------- */
 #main-mssg {
@@ -143,33 +176,26 @@ header .nav a,
 }
 /* --------- map --------- */
 #map-canvas {
-    width: 80%;
+    width: 100%;
     height: 400px;
-    margin: 0 auto;
     border-radius: 10px;
 }
 .location {
     margin-top: 70px;
 }
+.location a {
+    color: #fff;
+}
 /* --------- footer --------- */
 footer {
     padding: 100px 0 80px;
-
+    margin-top: 80px;
     text-align: center;
-    position: relative;
+    background-color: #0084c4;
+    color: #fff;
 }
 footer h3 {
     margin-bottom: 30px;
-}
-.up a {
-    color: #fff;
-    font-size: 24px;
-    position: absolute;
-    top: 30px;
-    left: 50%;
-}
-.up a:hover {
-    color: rgba(255,255,255,.5);
 }
 .sponzors img {
     margin-right: 20px;
@@ -182,6 +208,9 @@ footer li {
 }
 .contact {
     margin: 50px 0;
+}
+.contact a {
+    color: #fff;
 }
 .follow {
     text-align: center;
@@ -223,10 +252,6 @@ footer p {
     .video,
     .reklama,
     .anketa {
-        width: 100%;
-        margin: 0;
-    }
-    #map-canvas {
         width: 100%;
         margin: 0;
     }
