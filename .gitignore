@@ -18,4 +18,4 @@
 
 /config/initializers/local.rb
 
-.ruby_version
+.ruby-version
