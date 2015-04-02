@@ -36,6 +36,7 @@ gem 'devise'
 
 group :production do
 	gem 'rails_12factor'
+  gem 'passenger'
 end
 
 group :development, :test do
