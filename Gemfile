@@ -1,5 +1,10 @@
 source 'http://rubygems.org'
 
+gem 'capistrano', '~> 3.4'
+gem 'capistrano-rails'
+gem 'capistrano-passenger'
+gem 'capistrano-rbenv'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
