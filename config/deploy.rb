@@ -1,6 +1,3 @@
-# config valid only for current version of Capistrano
-lock '3.4.0'
-
 set :application, 'mladizubinpotok'
 set :repo_url, "git@github.com:biske/#{fetch(:application)}.git"
 set :user, 'biske'

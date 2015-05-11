@@ -18,11 +18,13 @@ require 'capistrano/deploy'
 # require 'capistrano/rvm'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
+
 require 'capistrano/bundler'
 require 'capistrano/rails'
-# require 'capistrano/rails/migrations'
-# require 'capistrano/passenger'
+
+# If you are using rbenv add these lines:
 require 'capistrano/rbenv'
+set :rbenv_type, :user # or :system, depends on your rbenv setup
 
 # require 'capistrano-nc/nc'
 
