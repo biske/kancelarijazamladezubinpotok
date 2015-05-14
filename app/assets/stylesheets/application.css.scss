@@ -41,14 +41,13 @@ h3 a:hover {
 /* --------- top-header --------- */
 .top-header {
     height: 50px;
-    font-size: 12px;
     background-color: #0084c4;
     color: #fff;
 }
 .top-header p {
     margin-bottom: 0;
     line-height: 50px;
-    font-size: 13px;
+    font-size: 11px;
 }
 .top-header img {
     margin-top: 12px;
@@ -75,17 +74,16 @@ h3 a:hover {
 /* --------- logo --------- */
 .logo {
     margin: 10px 0;
-    height: 180px;
 }
 .logo img {
-    width: 200px;
-    height: 100px;
+    width: 180px;
+    height: 80px;
     margin: 0 auto;
     display: block;
 }
 .logo h1 {
     text-align: center;
-    font-size: 28px;
+    font-size: 18px;
 }
 /* --------- nav --------- */
 .menu {
@@ -102,32 +100,12 @@ header .nav a,
 .nav {
     text-transform: uppercase;
 }
-.nav>li>a::after {
-    background: #fff;
-    position: absolute;
-    top: 70%;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 5px;
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-    transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    -webkit-transform: translateY(-10px);
-}
-.nav>li>a:hover::after {
-    background: #fff;
-    opacity: 1;
-    transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-}
 .nav>li>a:focus,
 .nav>li>a:hover {
     background-color: #0084c5;
+}
+.navbar-header span {
+    color: #fff;
 }
 /* --------- banner --------- */
 .jumbotron {
@@ -158,9 +136,6 @@ header .nav a,
 }
 .date {
     font-size: 14px;
-}
-.share {
-    text-align: right;
 }
 /* --------- news and fun --------- */
 #news-fun-side h1 {
@@ -201,6 +176,19 @@ header .nav a,
 .location a {
     color: #fff;
 }
+/* --------- contact page -------- */
+.contact-map {
+    margin-top: 50px;
+}
+.contact-form .form-control {
+    color: #000;
+    border-color: #cecece;
+}
+.contact-form .form-control::-webkit-input-placeholder { color: #555; }
+.contact-form .form-control:-moz-placeholder { color: #555; }
+.contact-form .form-control::-moz-placeholder { color: #555; }
+.contact-form .form-control:-ms-input-placeholder { color: #555; }
+
 /* --------- footer --------- */
 footer {
     padding: 100px 0 80px;
@@ -244,6 +232,9 @@ footer p {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	.top-header p {
+        font-size: 14px;
+    }
     .logo img {
         width: 350px;
         height: 180px;
@@ -261,6 +252,29 @@ footer p {
     .nav-tabs a {
         font-size: 14px;
     }
+    .nav>li>a::after {
+	    background: #fff;
+	    position: absolute;
+	    top: 70%;
+	    left: 0;
+	    content: '';
+	    width: 100%;
+	    height: 5px;
+	    opacity: 0;
+	    transition: opacity 0.3s, transform 0.3s;
+	    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	    transform: translateY(-10px);
+	    -moz-transform: translateY(-10px);
+	    -webkit-transform: translateY(-10px);
+	}
+	.nav>li>a:hover::after {
+	    background: #fff;
+	    opacity: 1;
+	    transform: translateY(0px);
+	    -moz-transform: translateY(0px);
+	    -webkit-transform: translateY(0px);
+	}
     #main-mssg h1 {
         padding-top: 30px;
     }
