@@ -19,3 +19,5 @@
 /config/initializers/local.rb
 
 .ruby-version
+
+config/secrets.yml

@@ -7,8 +7,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: <%= Rails.application.secrets.database_username %>
+  password: <%= Rails.application.secrets.database_password %>
 
 development:
   <<: *default
