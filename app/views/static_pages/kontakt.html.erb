@@ -76,8 +76,7 @@
             <h3><span class="glyphicon glyphicon-envelope"></span> Пошаљите нам поруку</h3>
           </div>
           <div class="panel-body">
-          <form role="form" class="contact-form">
-            <%= form_tag send_kontakt_email_path, method: :post do %>
+            <%= form_tag send_kontakt_email_path, class: 'contact-form', role: 'form' do %>
               <fieldset>
                 <div class="form-group">
                   <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Ваше име' %>
@@ -93,7 +92,6 @@
                 </div><!-- form-group -->
               </fieldset>
             <% end %>
-          </form>
           </div>
         </div><!-- panel -->
       </div>
