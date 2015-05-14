@@ -1,6 +1,6 @@
 <!-- map -->
 <div class="container">
-  <div id="map-canvas"></div>
+  <div id="map-canvas" class="contact-map">></div>
 </div><!-- container -->
 
 <%= render 'shared/map' %>
@@ -11,7 +11,7 @@
     <div class="row">
 
       <div class="col-lg-4 col-md-4 col-sm-4">
-        <div class="panel panel-default">
+        <div class="panel panel-primary">
           <div class="panel-heading">
             <h3><span class="glyphicon glyphicon-map-marker"></span> Адреса канцеларије</h3>
           </div>
@@ -22,7 +22,7 @@
           </div>
         </div><!-- panel adress -->
 
-        <div class="panel panel-default">
+        <div class="panel panel-primary">
           <div class="panel-heading">
             <h3><span class="glyphicon glyphicon-time"></span> Радно време</h3>
           </div>
@@ -76,6 +76,7 @@
             <h3><span class="glyphicon glyphicon-envelope"></span> Пошаљите нам поруку</h3>
           </div>
           <div class="panel-body">
+          <form role="form" class="contact-form">
             <%= form_tag send_kontakt_email_path, method: :post do %>
               <fieldset>
                 <div class="form-group">
@@ -92,6 +93,7 @@
                 </div><!-- form-group -->
               </fieldset>
             <% end %>
+          </form>
           </div>
         </div><!-- panel -->
       </div>
