@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails'
 
 gem 'capistrano', '~> 3.4'
 gem 'capistrano-rails'
