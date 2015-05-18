@@ -21,3 +21,5 @@
 .ruby-version
 
 config/secrets.yml
+
+.env
