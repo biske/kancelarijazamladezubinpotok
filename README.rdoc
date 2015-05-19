@@ -1,9 +1,9 @@
 == README
 
-Сајт канцеларије за младе Зубин Поток.
+Сајт омладине Зубин Поток.
 
 Адреса:
-https://kancelarijazamladezubinpotok.herokuapp.com
+https://mladizubinpotok.com
 
 == Подешавање
 
@@ -13,7 +13,7 @@ git clone git@github.com:biske/kancelarijazamladezubinpotok.git
 
 === Подешавање базе
 
-Преименовати config/initializers/local.rb.example у config/initializers/local.rb и подесити одговарајуће параметре
+Преименовати .env.example у .env и подесити одговарајуће параметре.
 
 Покренути команду:
 

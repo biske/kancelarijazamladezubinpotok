@@ -19,3 +19,7 @@
 /config/initializers/local.rb
 
 .ruby-version
+
+.env
+
+.DS_Store

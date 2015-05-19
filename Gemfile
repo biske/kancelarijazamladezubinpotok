@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+gem 'dotenv-rails'
 
 gem 'capistrano', '~> 3.4'
 gem 'capistrano-rails'
