@@ -16,15 +16,13 @@
 /* common styles */
 body {
     font-family: 'Play', serif;
+    font-size: 16px;
 }
 h1,
 h2,
 h3 {
     font-weight: bold;
     margin: 0;
-}
-p {
-    font-size: 16px;
 }
 a {
     color: #333;
@@ -176,6 +174,15 @@ header .nav a,
 .location a {
     color: #fff;
 }
+
+/* --------- about page -------- */
+#about-page {
+    margin-top: 40px;
+}
+.about-us {
+    margin-bottom: 40px;
+}
+
 /* --------- contact page -------- */
 .contact-map {
     margin-top: 50px;
