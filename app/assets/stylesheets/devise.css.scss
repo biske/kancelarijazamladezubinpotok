@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
     font-family: "Play", serif;
     background-color: #ebebeb;
@@ -8,12 +11,21 @@ h1 {
     font-weight: 300;
 }
 .blue {
-    color: #447fc8;
+    color: #337ab7;
 }
 .header {
-    height: 120px;
-    border-bottom: 1px solid #e5e5e5;
-    background-color: #fff;
+    line-height: 70px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 15px;
+}
+.header a {
+    font-size: 20px;
 }
 .account-wall {
     -webkit-border-radius: 20px;
@@ -30,11 +42,8 @@ h1 {
     left: 50%;
     margin: auto;
 }
-legend {
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 0;
-    margin-bottom: 20px;
+.acoount-wall h1 {
+    font-size: 32px;
 }
 .form-signin {
     max-width: 360px;
@@ -43,19 +52,14 @@ legend {
 }
 label {
     display: block;
-    margin-bottom: 5px;
+    font-weight: 300;
     font-size: 20px;
 }
 form input[type=text],
 form input[type=password] {
     margin-bottom: 15px;
-     position: relative;
     font-size: 16px;
-    height: auto;
     padding: 5px 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 .footer {
     margin: 20px 0;
@@ -63,4 +67,31 @@ form input[type=password] {
 }
 footer {
     text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
 }
+footer p {
+    margin: 0;
+}
+
+/* --------- media queries --------- */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .header h1 {
+        font-size: 32px;
+        line-height: 70px;
+        padding-top: 0;
+        text-align: left;
+    }
+}/* end of tablets styles */
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}/* end of desktops styles */
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}/* end of large desktops styles */
