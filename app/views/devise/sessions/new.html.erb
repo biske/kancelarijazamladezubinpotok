@@ -11,19 +11,19 @@
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 login-wraper">
       <div class="account-wall">
-        <form class="form form-signin">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form form-signin' }) do |f| %>
           <legend><h1>Улогуј се на <span class="blue">Канцеларија за младе</span></h1></legend>
           <div class="body">
             <label>Корисничко име</label>
-            <input type="text" required autofocus>
+            <%= f.text_field :email, autofocus: true, required: true %>
             <label>Лозинка</label>
-            <input type="password" required>
+            <%= f.password_field :password, autocomplete: "off" %>
           </div><!-- body -->
           <div class="footer">
             <input type="checkbox" value="remember-me"> Запамти ме&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="btn btn-primary" type="submit">Login</button>
           </div><!-- footer -->
-        </form>
+        <% end %>
       </div><!-- account-wall -->
     </div><!-- col -->
   </div><!-- row -->
