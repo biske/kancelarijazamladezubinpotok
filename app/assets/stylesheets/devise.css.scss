@@ -1,0 +1,97 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+    font-family: "Play", serif;
+    background-color: #ebebeb;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-weight: 300;
+}
+.blue {
+    color: #337ab7;
+}
+.header {
+    line-height: 70px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 15px;
+}
+.header a {
+    font-size: 20px;
+}
+.account-wall {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    max-width: 460px;
+    background-color: #fff;
+    text-align: center;
+    left: 50%;
+    margin: auto;
+}
+.acoount-wall h1 {
+    font-size: 32px;
+}
+.form-signin {
+    max-width: 360px;
+    padding: 15px;
+    margin: 0 auto;
+}
+label {
+    display: block;
+    font-weight: 300;
+    font-size: 20px;
+}
+form input[type=text],
+form input[type=password] {
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.footer {
+    margin: 20px 0;
+    font-size: 20px;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+footer p {
+    margin: 0;
+}
+
+/* --------- media queries --------- */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .header h1 {
+        font-size: 32px;
+        line-height: 70px;
+        padding-top: 0;
+        text-align: left;
+    }
+}/* end of tablets styles */
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}/* end of desktops styles */
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}/* end of large desktops styles */

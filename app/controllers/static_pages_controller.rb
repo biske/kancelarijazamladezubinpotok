@@ -6,4 +6,13 @@ class StaticPagesController < ApplicationController
     flash[:notice] = 'Ваша порука је успешно послата'
     redirect_to kontakt_path
   end
+
+  def kontakt
+  end
+
+  def naslovna
+  end
+
+  def o_nama
+  end
 end
