@@ -6,6 +6,8 @@ body {
     background-color: #ebebeb;
     margin: 0;
     padding: 0;
+    background-image: image-url("login-back.jpg");
+    background-size: cover;
 }
 h1 {
     font-weight: 300;
@@ -17,6 +19,7 @@ h1 {
     line-height: 70px;
     border-bottom: 1px solid #ccc;
     margin-bottom: 40px;
+    background-color: #fff;
 }
 .header h1 {
     margin: 0;
@@ -65,17 +68,16 @@ form input[type=password] {
     margin: 20px 0;
     font-size: 20px;
 }
-footer {
-    text-align: center;
-    margin-top: 40px;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-}
-footer p {
-    margin: 0;
-}
+// footer {
+//     text-align: center;
+//     margin-top: 40px;
+//     border-top: 1px solid #ccc;
+//     padding-top: 20px;
+// }
+// footer p {
+//     margin: 0;
+// }
 
-/* --------- media queries --------- */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .header h1 {
@@ -85,13 +87,3 @@ footer p {
         text-align: left;
     }
 }/* end of tablets styles */
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-
-}/* end of desktops styles */
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}/* end of large desktops styles */
