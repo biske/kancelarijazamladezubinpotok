@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+
   root to: 'static_pages#naslovna'
 
   devise_for :users, path: '', only: :sessions, path_names: { sign_in: 'login' }
