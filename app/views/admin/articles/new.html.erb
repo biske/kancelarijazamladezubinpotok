@@ -1,4 +1,6 @@
-<%= form_for(@article) do |f| %>
+<h1>New Article</h1>
+
+<%= form_for(@article, url: admin_articles_path) do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -23,3 +25,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<%= link_to 'Back', admin_articles_path %>
