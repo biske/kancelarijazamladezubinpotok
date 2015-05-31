@@ -3,7 +3,7 @@
 Сајт омладине Зубин Поток.
 
 Адреса:
-https://mladizubinpotok.com
+http://mladizubinpotok.com
 
 == Подешавање
 
