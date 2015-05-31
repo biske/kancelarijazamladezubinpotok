@@ -11,6 +11,7 @@ class StaticPagesController < ApplicationController
   end
 
   def naslovna
+    @articles = Article.all
   end
 
   def o_nama
