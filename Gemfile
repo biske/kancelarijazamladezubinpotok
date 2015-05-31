@@ -1,4 +1,6 @@
 source 'http://rubygems.org'
+gem 'tinymce-rails'
+
 gem 'dotenv-rails'
 
 gem 'capistrano', '~> 3.4'
@@ -34,7 +36,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'tzinfo-data'
-
 
 gem 'devise'
 # Use ActiveModel has_secure_password

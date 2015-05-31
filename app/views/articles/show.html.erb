@@ -5,10 +5,15 @@
 
 <p>
   <strong>Тело:</strong>
-  <%= @article.body %>
+  <%= raw(@article.body) %>
 </p>
 
 <p>
   <strong>Аутор:</strong>
   <%= @article.user.email %>
+</p>
+
+<p>
+  <strong>Направљено:</strong>
+  <%= @article.created_at %>
 </p>

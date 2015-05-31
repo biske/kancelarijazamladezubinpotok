@@ -1,16 +1,21 @@
 <p>
-  <strong>Title:</strong>
+  <strong>Наслов:</strong>
   <%= @article.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @article.body %>
+  <strong>Тело:</strong>
+  <%= raw(@article.body) %>
 </p>
 
 <p>
-  <strong>Author:</strong>
+  <strong>Аутор:</strong>
   <%= @article.user.email %>
+</p>
+
+<p>
+  <strong>Направљено:</strong>
+  <%= @article.created_at %>
 </p>
 
 <%= link_to 'Edit', edit_admin_article_path(@article) %> |
