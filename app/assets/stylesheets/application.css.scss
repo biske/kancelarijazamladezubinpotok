@@ -37,7 +37,7 @@ h3 a:hover {
 }
 /* --------- logo --------- */
 .logo {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .logo img {
     width: 180px;
@@ -212,7 +212,6 @@ footer p {
         margin: 0;
     }
     .logo h1 {
-        text-align: left;
         font-size: 36px;
         padding-top: 40px;
     }
@@ -265,6 +264,12 @@ footer p {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+    .logo h1 {
+        margin: 0;
+        font-size: 42px;
+        padding-top: 0;
+        line-height: 180px;
+    }
     header .nav a,
     .nav-tabs a {
         font-size: 16px;
@@ -276,10 +281,5 @@ footer p {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .logo h1 {
-        margin: 0;
-        font-size: 42px;
-        padding-top: 0;
-        line-height: 180px;
-    }
+
 }/* end of large desktops styles */
