@@ -13,12 +13,17 @@
       <div class="row">
 
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <h1><a href="#" title="Informacije o nama">О нама</a></h1>
+          <h1>
+            <%= link_to "О нама", o_nama_path %>
+          </h1>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9">
           <blockquote>
             <p>Канцеларија за младе у Зубином Потоку ради са циљем да на локалном нивоу реализује смернице дате у Националној стратегији за младе Републике Србије, спроводи Локални акциони план који обухвата решења за проблеме младих на територији наше општине као и да заступа ставове младих на вишем нивоу...</p>
-            <button type="button" class="btn btn-danger">Прочитајте више <span class="glyphicon glyphicon-chevron-right"></span></button>
+            <%= link_to o_nama_path, class: 'btn btn-danger' do %>
+              Прочитајте више
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            <% end %>
           </blockquote>
         </div>
 
