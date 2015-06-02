@@ -1,50 +1,19 @@
-<!-- header -->
 <header id="page-header">
-  <article class="top-header">
+  
+  <article class="logo">
     <div class="container">
-
-      <div class="row">
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
-          <p><span class="hidden-xs">Тел: </span>064/06-60-064</p>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-          <p><span class="hidden-xs">e-mail: </span>branko028@yahoo.com</p>
-        </div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-          <%= link_to "#", title: 'Пратите нас на фејсбуку', target: '_blank' do %>
-            <%= image_tag 'fb.png', class: 'img-rounded', width: 26, height: 26 %>
-          <% end %>
-        </div>
-        <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 hidden-xs">
-          <form class="navbar-form" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Претражи сајт" name="srch-term" id="srch-term">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                    </div>
-                </div>
-              </form>
-            </div>
-            
-          </div><!-- row -->
-
-        </div><!-- container -->
-    </article><!-- article -->
-
-    <article class="logo">
-      <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
-          <%= link_to "#", title: 'Naslovna strana' do %>
-            <%= image_tag 'logo.png', alt: 'Logo kancelarije' %>
-          <% end %>
-        </div>
-        <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
-          <h1>Канцеларија за младе Зубин Поток</h1>
-        </div>
-      </div><!-- row -->
-        </div><!-- container -->
-    </article>
+    <div class="row">
+      <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
+        <%= link_to "#", title: 'Naslovna strana' do %>
+          <%= image_tag 'logo.png', alt: 'Logo kancelarije' %>
+        <% end %>
+      </div>
+      <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
+        <h1>Млади Зубин Поток</h1>
+      </div>
+    </div><!-- row -->
+      </div><!-- container -->
+  </article>
     
   <!-- navigation -->
   <div class="menu">
@@ -55,7 +24,7 @@
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
               <span class="sr-only">Toggle navigation</span>
-              <span><b>MENU</b></span>
+              <span><b>МЕНИ</b></span>
             </button>
           </div><!-- navbar-header -->
 
@@ -78,10 +47,10 @@
                 <span class="glyphicon glyphicon-info-sign hidden-md hidden-sm"></span>
                 Вести
               <% end %>
-              <li><a href="#" title="Zanimljivosti"><span class="glyphicon glyphicon-play-circle hidden-md hidden-sm"></span> Занимљивости</a></li>
+              <!-- <li><a href="#" title="Zanimljivosti"><span class="glyphicon glyphicon-play-circle hidden-md hidden-sm"></span> Занимљивости</a></li>
               <li><a href="#" title="Konkursi"><span class="glyphicon glyphicon-pencil hidden-md hidden-sm"></span> Конкурси</a></li>
               <li><a href="#" title="Projekti"><span class="glyphicon glyphicon-folder-open hidden-md hidden-sm"></span> Пројекти</a></li>
-              <li><a href="#" title="Dokumenta"><span class="glyphicon glyphicon-file hidden-md hidden-sm"></span> Документа</a></li>
+              <li><a href="#" title="Dokumenta"><span class="glyphicon glyphicon-file hidden-md hidden-sm"></span> Документа</a></li> -->
               <li><a href="#" title="Galerija fotografija i videa"><span class="glyphicon glyphicon-picture hidden-md hidden-sm"></span> Галерија</a></li>
               <li>
                 <%= link_to kontakt_path do %>
@@ -97,4 +66,4 @@
     </div><!-- container -->
     </div><!-- menu -->
   
-</header><!-- header -->
+</header><!-- header
