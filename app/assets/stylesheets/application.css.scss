@@ -35,40 +35,6 @@ h3 a:hover {
 .btn-danger {
     background-color: #d2322d;
 }
-
-/* --------- top-header --------- */
-.top-header {
-    height: 50px;
-    background-color: #0084c4;
-    color: #fff;
-}
-.top-header p {
-    margin-bottom: 0;
-    line-height: 50px;
-    font-size: 11px;
-}
-.top-header img {
-    margin-top: 12px;
-    opacity: .7;
-} 
-.top-header img:hover {
-    opacity: 1;
-}
-.form-control,
-.input-group-btn .btn-default {
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-}
-.form-control::-webkit-input-placeholder { color: white; }
-.form-control:-moz-placeholder { color: white; }
-.form-control::-moz-placeholder { color: white; }
-.form-control:-ms-input-placeholder { color: white; }
-
-.form-control:focus {
-    color: #fff;
-    border: 1px solid #fff;
-}
 /* --------- logo --------- */
 .logo {
     margin: 10px 0;
