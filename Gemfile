@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'tinymce-rails'
+gem 'bootsy'
 
 gem 'dotenv-rails'
 

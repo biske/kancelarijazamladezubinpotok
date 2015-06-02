@@ -44,6 +44,10 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
+    bootsy (2.1.0)
+      carrierwave (~> 0.10)
+      mini_magick (~> 4.0)
+      remotipart (~> 1.2)
     builder (3.2.2)
     capistrano (3.4.0)
       i18n
@@ -60,6 +64,11 @@ GEM
     capistrano-rbenv (2.0.3)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -104,6 +113,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.4.3)
+    mini_magick (4.2.7)
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.10.1)
@@ -163,6 +173,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    remotipart (1.2.1)
     respond-js-rails (1.4.2.1)
       railties (~> 4.0, < 5.0)
     responders (2.1.0)
@@ -195,8 +206,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    tinymce-rails (4.0.19)
-      railties (>= 3.1.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     tzinfo-data (1.2015.1)
@@ -219,6 +228,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  bootsy
   capistrano (~> 3.4)
   capistrano-passenger
   capistrano-rails
@@ -239,7 +249,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
-  tinymce-rails
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
