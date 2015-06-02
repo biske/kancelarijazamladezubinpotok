@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   root to: 'static_pages#naslovna'
 
   devise_for :users, path: '', only: :sessions, path_names: { sign_in: 'login' }
