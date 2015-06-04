@@ -82,10 +82,15 @@ header .nav a,
 }
 /* --------- main-mssg --------- */
 #main-mssg {
-    padding: 60px 0;
-}
-#main-mssg h1 {
+    margin: 40px 0 60px 0;
     text-align: center;
+    line-height: 1.5;
+}
+#main-mssg .container {
+    max-width: 550px;
+}
+#main-mssg p {
+    margin: 20px 0;
 }
 /* --------- projects --------- */
 .thumbnail {
@@ -256,7 +261,7 @@ footer p {
     }
     .jumbotron {
         padding-top: 170px;
-        padding-bottom: 120px;
+        padding-bottom: 100px;
     }
     #news-fun-side h1 {
         font-size: 36px;
