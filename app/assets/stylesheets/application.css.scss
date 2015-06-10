@@ -86,15 +86,14 @@ header .nav a,
 /* --------- main-mssg --------- */
 #main-mssg {
     margin: 40px 0 60px 0;
-    text-align: center;
     line-height: 1.5;
 }
-#main-mssg .container {
-    max-width: 550px;
+#main-mssg h1 {
+    padding-top: 30px;
+    text-align: center;
 }
-#main-mssg p {
-    margin: 20px 0;
-}
+
+
 /* --------- news and fun --------- */
 #news-fun-side h1 {
     text-align: center;
