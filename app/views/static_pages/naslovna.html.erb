@@ -27,7 +27,6 @@
           </blockquote>
         </div>
 
-
       </div><!-- row -->
     </div><!-- container -->
   </section><!-- main mssg -->
@@ -38,78 +37,71 @@
       <div class="row">
 
         <article class="news-fun">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-
-            <h1><%= link_to "Вести", articles_path %></h1>
-            <% @articles.each do |article| %>
+          <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+			
+			<% @articles.each do |article| %>
+              
               <div class="thumbnail">
-                <div class="row">
-                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                    <p class="date"><%= article.created_at %></p>
-                  </div>
-                  <div class="col-lg-2 col-md-2 col-sm-2  col-xs-2 share">
-                    <a href="#" title="Podeli"><span class="glyphicon glyphicon-share"></span></a>
-                  </div>
-                </div><!-- row -->
-                <%= link_to "#" do %>
-                  <%= image_tag 'slika-5.jpg' %>
+                <p class="date"><%= article.created_at %></p>
+               	<%= link_to "#" do %>
+                <%= image_tag 'slika-4.jpg' %>
                 <% end %>
                 <div class="caption">
-                  <h2><%= link_to article.title, article_path(article) %></h2>
-                  <p><%= truncate(my_strip_tags(article.body), length: 200) { link_to ">>", article_path(article) } %></p>
-                  
+	                <p class="news"><%= link_to "Вести", articles_path %></p>
+	                <h2><%= link_to article.title, article_path(article) %></h2>
+	                <p class="hidden-sm"><%= truncate(my_strip_tags(article.body), length: 200) { link_to ">>", article_path(article) } %></p>
                 </div><!-- caption -->
               </div><!-- thumbnail -->
+            
             <% end %>
+
           </div><!-- col -->
         </article><!-- news -->
 
         <article class="projects">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-            <h1><a href="#" title="Конкурси">Конкурси</a> | <a href="#" title="Пројекти">Пројекти</a> | <a href="#" title="Документа">Документа</a></h1>
-              <div class="thumbnail">
-                <div class="row">
-                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                    <p class="date">12/12/2014</p>
-                  </div>
-                  <div class="col-lg-2 col-md-2 col-sm-2  col-xs-2 share">
-                    <a href="#" title="Podeli"><span class="glyphicon glyphicon-share"></span></a>
-                  </div>
-                </div><!-- row -->
-                <%= link_to "#" do %>
-                  <%= image_tag 'slika-5.jpg' %>
-                <% end %>
-                <div class="caption">
-                  <h2><a href="#">Lorem ipsum</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
-                  <a href="#"><button type="button" class="btn btn-danger">Више <span class="glyphicon glyphicon-chevron-right"></span></button></a>
-                </div><!-- caption -->
-              </div><!-- thumbnail -->
-              <div class="thumbnail">
-                <div class="row">
-                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                    <p class="date">12/12/2014</p>
-                  </div>
-                  <div class="col-lg-2 col-md-2 col-sm-2  col-xs-2 share">
-                    <a href="#" title="Podeli"><span class="glyphicon glyphicon-share"></span></a>
-                  </div>
-                </div><!-- row -->
-                <%= link_to "#" do %>
-                  <%= image_tag 'slika-5.jpg' %>
-                <% end %>
-                <div class="caption">
-                  <h2><a href="#">Lorem ipsum</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
-                  <a href="#"><button type="button" class="btn btn-danger">Више <span class="glyphicon glyphicon-chevron-right"></span></button></a>
-                </div><!-- caption -->
-              </div><!-- thumbnail -->
+          <div class="thumbnail">
+            <p class="date">12/12/2014</p>
+            <%= link_to "#" do %>
+              <%= image_tag 'slika-5.jpg' %>
+            <% end %>
+            <div class="caption">
+              <p class="news">Пројекти</p>
+              <h2><a href="#">Lorem ipsum</a></h2>
+              <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
+            </div><!-- caption -->
+          </div><!-- thumbnail -->
+
+          <div class="thumbnail">
+            <p class="date">12/12/2014</p>
+            <%= link_to "#" do %>
+              <%= image_tag 'slika-2.jpg' %>
+            <% end %>
+            <div class="caption">
+              <p class="news">Пројекти</p>
+              <h2><a href="#">Lorem ipsum</a></h2>
+              <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
+            </div><!-- caption -->
+          </div><!-- thumbnail -->
+
+          <div class="thumbnail">
+            <p class="date">12/12/2014</p>
+            <%= link_to "#" do %>
+              <%= image_tag 'slika-2.jpg' %>
+            <% end %>
+            <div class="caption">
+              <p class="news">Пројекти</p>
+              <h2><a href="#">Lorem ipsum</a></h2>
+              <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
+            </div><!-- caption -->
+          </div><!-- thumbnail -->
 
           </div><!-- col -->
         </article><!-- projects -->
 
         <aside class="side">
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 video">
@@ -177,40 +169,40 @@
 
         <h1>Нови албуми фотографија</h1>
 
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
           <div class="thumbnail">
             <%= link_to "#", title: 'Галерија 1' do %>
-              <%= image_tag 'slika-1.jpg', alt: '#', class: 'img-responsive' %>
+              <%= image_tag 'slika-2.jpg', alt: '#', class: 'img-responsive' %>
             <% end %>
             <div class="thumbnail-caption">
               <h3>Галерија 1</h3>
-              <p>Акција чишћења</p>
+              <p class="hidden-xs">Акција чишћења</p>
               <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
             </div>
           </div>
         </div><!-- gallery 1 -->
 
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
           <div class="thumbnail">
             <%= link_to "#", title: 'Галерија 2' do %>
               <%= image_tag 'slika-2.jpg', alt: '#', class: 'img-responsive' %>
             <% end %>
             <div class="thumbnail-caption">
               <h3>Галерија 2</h3>
-              <p>Акција прикупљања помоћи</p>
+              <p class="hidden-xs">Акција прикупљања помоћи</p>
               <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
             </div>  
           </div>
         </div><!-- gallery 2 -->
 
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
           <div class="thumbnail">
             <%= link_to "#", title: 'Галерија 3' do %>
-              <%= image_tag 'slika-4.jpg', alt: '#', class: 'img-responsive' %>
+              <%= image_tag 'slika-1.jpg', alt: '#', class: 'img-responsive' %>
             <% end %>         
             <div class="thumbnail-caption">
               <h3>Галерија 3</h3>
-              <p>Роштиљ и пиво гратис</p>
+              <p class="hidden-xs">Роштиљ и пиво гратис</p>
               <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
             </div>
           </div>
