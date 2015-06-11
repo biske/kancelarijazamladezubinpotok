@@ -2,7 +2,7 @@
     <div class="container">
       <h1>Акција прикупљања помоћи!</h1>
       <p>Акција прикупљања помоћи почиње тад и тад.</p>
-      <p><a class="btn btn-danger btn-lg" href="#" role="button">Сазнајте више <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Сазнајте више <span class="glyphicon glyphicon-chevron-right"></span></a></p>
     </div><!-- container -->
   </div><!-- jumbotron -->
   
@@ -20,7 +20,7 @@
         <div class="col-lg-9 col-md-9 col-sm-9">
           <blockquote>
             <p>Канцеларија за младе у Зубином Потоку ради са циљем да на локалном нивоу реализује смернице дате у Националној стратегији за младе Републике Србије, спроводи Локални акциони план који обухвата решења за проблеме младих на територији наше општине као и да заступа ставове младих на вишем нивоу...</p>
-            <%= link_to o_nama_path, class: 'btn btn-danger' do %>
+            <%= link_to o_nama_path, class: 'btn btn-primary' do %>
               Прочитајте више
               <span class="glyphicon glyphicon-chevron-right"></span>
             <% end %>
@@ -43,7 +43,7 @@
               
               <div class="thumbnail">
                 <p class="date"><%= article.created_at %></p>
-               	<%= link_to "#" do %>
+               	<%= link_to article_path(article) do %>
                 <%= image_tag 'slika-4.jpg' %>
                 <% end %>
                 <div class="caption">
@@ -177,7 +177,7 @@
             <div class="thumbnail-caption">
               <h3>Галерија 1</h3>
               <p class="hidden-xs">Акција чишћења</p>
-              <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
+              <a href="#"><button type="button" class="btn btn-primary">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
             </div>
           </div>
         </div><!-- gallery 1 -->
@@ -190,7 +190,7 @@
             <div class="thumbnail-caption">
               <h3>Галерија 2</h3>
               <p class="hidden-xs">Акција прикупљања помоћи</p>
-              <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
+              <a href="#"><button type="button" class="btn btn-primary">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
             </div>  
           </div>
         </div><!-- gallery 2 -->
@@ -203,7 +203,7 @@
             <div class="thumbnail-caption">
               <h3>Галерија 3</h3>
               <p class="hidden-xs">Роштиљ и пиво гратис</p>
-              <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
+              <a href="#"><button type="button" class="btn btn-primary">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
             </div>
           </div>
         </div><!-- gallery 3 -->
