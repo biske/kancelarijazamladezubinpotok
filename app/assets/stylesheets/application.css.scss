@@ -70,7 +70,9 @@ header .nav a,
 .navbar-header span {
     color: #fff;
 }
-
+.navbar-header span:hover {
+    color: #23527c;
+}
 /* --------- banner --------- */
 .jumbotron {
     padding-top: 80px;
