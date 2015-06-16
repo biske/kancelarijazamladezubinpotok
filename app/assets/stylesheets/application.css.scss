@@ -32,9 +32,6 @@ h2 a:hover,
 h3 a:hover {
     text-decoration: none;
 }
-.btn-danger {
-    background-color: #d2322d;
-}
 .thumbnail {
     border: none;
 }
@@ -59,7 +56,6 @@ h3 a:hover {
 header .nav a,
 .nav-tabs a {
     color: #fff;
-    font-size: 15px;
 }
 .nav>li>a {
     padding: 5px;
@@ -74,6 +70,7 @@ header .nav a,
 .navbar-header span {
     color: #fff;
 }
+
 /* --------- banner --------- */
 .jumbotron {
     padding-top: 80px;
@@ -92,8 +89,6 @@ header .nav a,
     padding-top: 30px;
     text-align: center;
 }
-
-
 /* --------- news and fun --------- */
 #news-fun-side h1 {
     text-align: center;
@@ -107,12 +102,12 @@ header .nav a,
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0,0,0,.8);
 }
-.thumbnail .caption {
+#news-fun-side .thumbnail .caption {
     position: absolute;
     bottom: 0;
     color: #fff;  
 }
-.thumbnail a {
+#news-fun-side .thumbnail a {
     color: #fff;
 }
 .caption a:hover {
@@ -177,11 +172,27 @@ aside {
     text-align: center;
 }
 /* --------- about page -------- */
-#about-page {
-    margin-top: 40px;
+.about-us,
+.articles,
+.single-article {
+    margin: 80px 0;
 }
-.about-us {
-    margin-bottom: 40px;
+/* --------- news page -------- */
+.articles h2 {
+    padding-bottom: 10px;
+}
+.articles a:hover {
+    text-decoration: none;
+}
+/* --------- single-article  page -------- */
+.article-author {
+    display: inline-block;
+    font-size: 14px;
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.article-body {
+    margin: 20px 0;
 }
 
 /* --------- contact page -------- */
@@ -196,7 +207,6 @@ aside {
 .contact-form .form-control:-moz-placeholder { color: #555; }
 .contact-form .form-control::-moz-placeholder { color: #555; }
 .contact-form .form-control:-ms-input-placeholder { color: #555; }
-
 /* --------- footer --------- */
 footer {
     padding: 100px 0 80px;
@@ -259,9 +269,6 @@ footer p {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-	.top-header p {
-        font-size: 14px;
-    }
     .logo img {
         width: 350px;
         height: 180px;
@@ -273,12 +280,7 @@ footer p {
     }
     .nav li {
         line-height: 65px;
-    }
-    header .nav a,
-    .nav-tabs a {
-        font-size: 14px;
-    }
-    
+    }  
     #main-mssg h1 {
         padding-top: 30px;
     }
@@ -308,10 +310,6 @@ footer p {
         text-align: left;
         padding-top: 0;
         line-height: 180px;
-    }
-    header .nav a,
-    .nav-tabs a {
-        font-size: 16px;
     }
     .jumbotron {
         padding-top: 170px;
