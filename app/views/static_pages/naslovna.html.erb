@@ -5,13 +5,10 @@
       <p><a class="btn btn-primary btn-lg" href="#" role="button">Сазнајте више <span class="glyphicon glyphicon-chevron-right"></span></a></p>
     </div><!-- container -->
   </div><!-- jumbotron -->
-  
-
   <!-- main mssg -->
   <section id="main-mssg">
     <div class="container">
       <div class="row">
-
         <div class="col-lg-3 col-md-3 col-sm-3">
           <h1>
             <%= link_to "О нама", o_nama_path %>
@@ -30,21 +27,17 @@
       </div><!-- row -->
     </div><!-- container -->
   </section><!-- main mssg -->
-  
   <!-- news and fun and aside -->
   <section id="news-fun-side">
     <div class="container">
       <div class="row">
-
         <article class="news-fun">
           <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
-			
-			<% @articles.each do |article| %>
-              
+      			<% @articles.each do |article| %>
               <div class="thumbnail">
                 <p class="date"><%= article.created_at %></p>
                	<%= link_to article_path(article) do %>
-                <%= image_tag 'slika-4.jpg' %>
+                  <%= image_tag 'slika-4.jpg' %>
                 <% end %>
                 <div class="caption">
 	                <p class="news"><%= link_to "Вести", articles_path %></p>
@@ -52,57 +45,48 @@
 	                <p class="hidden-sm"><%= truncate(my_strip_tags(article.body), length: 200) { link_to ">>", article_path(article) } %></p>
                 </div><!-- caption -->
               </div><!-- thumbnail -->
-            
             <% end %>
-
           </div><!-- col -->
         </article><!-- news -->
-
         <article class="projects">
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-
-          <div class="thumbnail">
-            <p class="date">12/12/2014</p>
-            <%= link_to "#" do %>
-              <%= image_tag 'slika-5.jpg' %>
-            <% end %>
-            <div class="caption">
-              <p class="news">Пројекти</p>
-              <h2><a href="#">Lorem ipsum</a></h2>
-              <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
-            </div><!-- caption -->
-          </div><!-- thumbnail -->
-
-          <div class="thumbnail">
-            <p class="date">12/12/2014</p>
-            <%= link_to "#" do %>
-              <%= image_tag 'slika-2.jpg' %>
-            <% end %>
-            <div class="caption">
-              <p class="news">Пројекти</p>
-              <h2><a href="#">Lorem ipsum</a></h2>
-              <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
-            </div><!-- caption -->
-          </div><!-- thumbnail -->
-
-          <div class="thumbnail">
-            <p class="date">12/12/2014</p>
-            <%= link_to "#" do %>
-              <%= image_tag 'slika-2.jpg' %>
-            <% end %>
-            <div class="caption">
-              <p class="news">Пројекти</p>
-              <h2><a href="#">Lorem ipsum</a></h2>
-              <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
-            </div><!-- caption -->
-          </div><!-- thumbnail -->
-
+            <div class="thumbnail">
+              <p class="date">12/12/2014</p>
+              <%= link_to "#" do %>
+                <%= image_tag 'slika-5.jpg' %>
+              <% end %>
+              <div class="caption">
+                <p class="news">Пројекти</p>
+                <h2><a href="#">Lorem ipsum</a></h2>
+                <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
+              </div><!-- caption -->
+            </div><!-- thumbnail -->
+            <div class="thumbnail">
+              <p class="date">12/12/2014</p>
+              <%= link_to "#" do %>
+                <%= image_tag 'slika-2.jpg' %>
+              <% end %>
+              <div class="caption">
+                <p class="news">Пројекти</p>
+                <h2><a href="#">Lorem ipsum</a></h2>
+                <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
+              </div><!-- caption -->
+            </div><!-- thumbnail -->
+            <div class="thumbnail">
+              <p class="date">12/12/2014</p>
+              <%= link_to "#" do %>
+                <%= image_tag 'slika-2.jpg' %>
+              <% end %>
+              <div class="caption">
+                <p class="news">Пројекти</p>
+                <h2><a href="#">Lorem ipsum</a></h2>
+                <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
+              </div><!-- caption -->
+            </div><!-- thumbnail -->
           </div><!-- col -->
         </article><!-- projects -->
-
         <aside class="side">
           <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 video">
                 <div class="panel panel-default">
@@ -110,12 +94,11 @@
                     <h3>Препоручујемо видео 1</h3>
                   </div>
                   <div class="panel-body">
-                    <%= video_tag 'our_vineyard.mp4', width: '100%', height: '100%', poster: 'our_vineyard.jpg', controls: true %>
+                    <%= video_tag 'avantura.mp4', width: '100%', height: '100%', poster: 'poster.jpg', controls: true %>
                   </div>
                 </div><!-- panel -->      
               </div><!-- col -->
             </div><!-- row -->
-
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 video">
                 <div class="panel panel-default">
@@ -128,7 +111,6 @@
                 </div><!-- panel -->      
               </div><!-- col -->
             </div><!-- row -->
-
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 reklama">
                 <div class="panel panel-default">
@@ -136,12 +118,13 @@
                     <h3>Реклама 1</h3>
                   </div>
                   <div class="panel-body">
-                    <p>Садржај</p>
+                    <%= link_to "http://kzm.raska.rs", title: 'Канцеларија за младе Рашка', target: '_blank' do %>
+                      <%= image_tag 'kzm-raska.png', class: 'img-responsive' %>
+                    <% end %>
                   </div>
                 </div><!-- panel -->
               </div><!-- col -->
             </div><!-- row -->
-
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 reklama">
                 <div class="panel panel-default">
@@ -149,78 +132,107 @@
                     <h3>Реклама 2</h3>
                   </div>
                   <div class="panel-body">
-                    <p>Садржај</p>
+                    <%= link_to "http://acdc-kosovo.org/index.php", target: '_blank', title: 'ACDC-Kosovo' do %>
+                      <%= image_tag 'acdc-logo.png', class: 'img-responsive' %>
+                    <% end %>
                   </div>
                 </div><!-- panel -->
               </div><!-- col -->
             </div><!-- row -->
-
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 reklama">
+                <div class="panel panel-default">
+                  <div class="panel-heading hidden-sm">
+                    <h3>Реклама 3</h3>
+                  </div>
+                  <div class="panel-body">
+                    <%= link_to "https://www.facebook.com/udruzenjemladih.putokaz?fref=ts", target: '_blank', title: 'Фејсбук страница организације Путоказ' do %>
+                      <%= image_tag 'putokaz-logo.jpg', class: 'img-responsive' %>
+                    <% end %>
+                  </div>
+                </div><!-- panel -->
+              </div><!-- col -->
+            </div><!-- row -->
           </div><!-- col -->
         </aside><!-- side -->
-
       </div><!-- row -->
     </div><!-- container -->
   </section><!-- news-fun-side -->
-
   <!-- gallery -->
   <section id="gallery">
     <div class="container">
       <div class="row">
-
-        <h1>Нови албуми фотографија</h1>
-
+        <h1>Издвојене фотографије</h1>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
           <div class="thumbnail">
-            <%= link_to "#", title: 'Галерија 1' do %>
-              <%= image_tag 'slika-2.jpg', alt: '#', class: 'img-responsive' %>
+            <%= link_to "#", title: 'Баскет' do %>
+              <%= image_tag 'basket.jpg', alt: '#', class: 'img-responsive' %>
             <% end %>
             <div class="thumbnail-caption">
-              <h3>Галерија 1</h3>
-              <p class="hidden-xs">Акција чишћења</p>
-              <a href="#"><button type="button" class="btn btn-primary">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
+              <h3>Баскет</h3>
+              <p class="hidden-xs">Учесници турнира у баскета</p>
+              <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
             </div>
           </div>
         </div><!-- gallery 1 -->
-
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
           <div class="thumbnail">
-            <%= link_to "#", title: 'Галерија 2' do %>
-              <%= image_tag 'slika-2.jpg', alt: '#', class: 'img-responsive' %>
+            <%= link_to "#", title: 'Трофеји' do %>
+              <%= image_tag 'trofeji.jpg', alt: '#', class: 'img-responsive' %>
             <% end %>
             <div class="thumbnail-caption">
-              <h3>Галерија 2</h3>
-              <p class="hidden-xs">Акција прикупљања помоћи</p>
-              <a href="#"><button type="button" class="btn btn-primary">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
+              <h3>Пехари</h3>
+              <p class="hidden-xs">Најбољима су уручени трофеји</p>
+              <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
             </div>  
           </div>
         </div><!-- gallery 2 -->
-
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
           <div class="thumbnail">
-            <%= link_to "#", title: 'Галерија 3' do %>
-              <%= image_tag 'slika-1.jpg', alt: '#', class: 'img-responsive' %>
+            <%= link_to "#", title: 'Медаље' do %>
+              <%= image_tag 'medalje.jpg', alt: '#', class: 'img-responsive' %>
             <% end %>         
             <div class="thumbnail-caption">
-              <h3>Галерија 3</h3>
-              <p class="hidden-xs">Роштиљ и пиво гратис</p>
-              <a href="#"><button type="button" class="btn btn-primary">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
+              <h3>Медаље</h3>
+              <p class="hidden-xs">Медаље за златне момке</p>
+              <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
             </div>
           </div>
-        </div><!-- gallery 3 -->
-
-      </div><!-- row -->
+        </div><!-- gallery 3 -->      
+          <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-6">
+            <div class="thumbnail">
+              <%= link_to "#", title: 'Састанак' do %>
+                <%= image_tag 'sastanak.jpg', alt: '#', class: 'img-responsive' %>
+              <% end %>         
+              <div class="thumbnail-caption">
+                <h3>Састанак</h3>
+                <p class="hidden-xs">Састанак за будућност младих :B</p>
+                <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
+              </div>
+            </div>
+          </div><!-- gallery 4 -->        
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            <div class="thumbnail">
+              <%= link_to "#", title: 'Твој-живот' do %>
+                <%= image_tag 'tvoj-zivot.jpg', alt: '#', class: 'img-responsive' %>
+              <% end %>         
+              <div class="thumbnail-caption">
+                <h3>Твој живот</h3>
+                <p class="hidden-xs">Твој живот - не знам </p>
+                <a href="#"><button type="button" class="btn btn-danger">Цео албум <span class="glyphicon glyphicon-chevron-right"></span></button></a>
+              </div>
+            </div>
+          </div><!-- gallery 5 -->
+        </div><!-- row -->
     </div><!-- container -->
   </section><!-- gallery -->
-
   <section id="map">
     <div class="container">
       <div class="row">
-
         <div class="col-lg-8 col-md-8 col-sm-8">
           <div id="map-canvas"></div>
         </div>
         <%= render 'shared/map' %>
-
         <div class="col-lg-4 col-md-4 col-sm-4 location">
           <div class="panel panel-primary">
             <div class="panel-heading">
@@ -235,7 +247,6 @@
             </div>
           </div><!-- panel -->
         </div><!-- col -->
-
       </div><!-- row -->
     </div><!-- container -->
   </section><!-- map -->
