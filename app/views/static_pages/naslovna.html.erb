@@ -27,130 +27,145 @@
       </div><!-- row -->
     </div><!-- container -->
   </section><!-- main mssg -->
+  
   <!-- news and fun and aside -->
   <section id="news-fun-side">
     <div class="container">
       <div class="row">
+        
         <article class="news-fun">
-          <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
-      			<% @articles.each do |article| %>
-              <div class="thumbnail">
-                <p class="date"><%= article.created_at %></p>
-               	<%= link_to article_path(article) do %>
-                  <%= image_tag 'slika-4.jpg' %>
-                <% end %>
-                <div class="caption">
-	                <p class="news"><%= link_to "Вести", articles_path %></p>
-	                <h2><%= link_to article.title, article_path(article) %></h2>
-	                <p class="hidden-sm"><%= truncate(my_strip_tags(article.body), length: 200) { link_to ">>", article_path(article) } %></p>
-                </div><!-- caption -->
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      			
+            <% @articles.each do |article| %>
+              <div class="thumbnail row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-7">
+                  <div class="caption">    
+                    <p class="date"><%= article.created_at %></p>                
+                    <h2><%= link_to article.title, article_path(article) %></h2>
+                    <p class="hidden-xs"><%= truncate(my_strip_tags(article.body), length: 200) { link_to ">>", article_path(article) } %></p>
+                    <p class="news"><%= link_to "Вести", articles_path %></p>
+                  </div><!-- caption -->
+                </div><!-- col -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-5">
+                  <%= link_to article_path(article) do %>
+                    <%= image_tag 'slika-4.jpg' %>
+                  <% end %>
+                </div><!-- col -->
               </div><!-- thumbnail -->
             <% end %>
           </div><!-- col -->
         </article><!-- news -->
-        <article class="projects">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="thumbnail">
-              <p class="date">12/12/2014</p>
-              <%= link_to "#" do %>
-                <%= image_tag 'slika-5.jpg' %>
-              <% end %>
-              <div class="caption">
-                <p class="news">Пројекти</p>
-                <h2><a href="#">Lorem ipsum</a></h2>
-                <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
-              </div><!-- caption -->
-            </div><!-- thumbnail -->
-            <div class="thumbnail">
-              <p class="date">12/12/2014</p>
-              <%= link_to "#" do %>
-                <%= image_tag 'slika-2.jpg' %>
-              <% end %>
-              <div class="caption">
-                <p class="news">Пројекти</p>
-                <h2><a href="#">Lorem ipsum</a></h2>
-                <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
-              </div><!-- caption -->
-            </div><!-- thumbnail -->
-            <div class="thumbnail">
-              <p class="date">12/12/2014</p>
-              <%= link_to "#" do %>
-                <%= image_tag 'slika-2.jpg' %>
-              <% end %>
-              <div class="caption">
-                <p class="news">Пројекти</p>
-                <h2><a href="#">Lorem ipsum</a></h2>
-                <p class="hidden-sm">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
-              </div><!-- caption -->
-            </div><!-- thumbnail -->
+        
+        <article class="projekti-dokumenta">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 projects">
+            
+            <div class="thumbnail row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-7">
+                <div class="caption">
+                  <p class="date">12/12/2014</p>
+                  <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
+                  <p class="hidden-xs">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
+                  <p class="news">Пројекти</p>
+                </div><!-- caption -->
+              </div><!-- col -->
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-5">
+                <%= link_to "#" do %>
+                  <%= image_tag 'slika-5.jpg' %>
+                <% end %>
+              </div><!-- col -->
+            </div>
+              
+              <div class="thumbnail row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-7">
+                  <div class="caption">
+                    <p class="date">12/12/2014</p>
+                    <h2><a href="#">Lorem ipsum onsec sicing, orem!</a></h2>
+                    <p class="hidden-xs">Lorem ipsum dolor sit amet, consec sicing, orem ipsum dolor sit amet, consectetur adipisicing dolor sit amet.</p>
+                    <p class="news">Пројекти</p>
+                  </div><!-- caption -->
+                </div><!-- col -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-5">
+                  <%= link_to "#" do %>
+                    <%= image_tag 'slika-5.jpg' %>
+                  <% end %>
+                </div><!-- col -->
+              </div>
+
           </div><!-- col -->
         </article><!-- projects -->
         
-        <aside class="side">
-          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+        <!-- side -->
+        <aside>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 side">
             
-            <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 video">
-                <div class="panel panel-default">
-                  <div class="panel-heading hidden-sm">
-                    <h3>Препоручујемо видео 1</h3>
-                  </div>
-                  <div class="panel-body">
-                    <%= video_tag 'avantura.mp4', width: '100%', height: '100%', poster: 'poster.jpg', controls: true %>
-                  </div>
-                </div><!-- panel -->      
+            <div class="col-sm-1 visible-sm"></div><!-- samo za offset u sm velicini -->
+              <div class="col-lg-12 col-md-12 col-sm-10 col-xs-12 video">
+                <h3>Препоручујемо видео</h3>
+                <%= video_tag 'avantura.mp4', width: '100%', height: '100%', poster: 'poster.jpg', controls: true %>
               </div><!-- col -->
-            </div><!-- row -->
-            
-            <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 reklama">
-                <div class="panel panel-default">
-                  <div class="panel-heading hidden-sm">
-                    <h3>Реклама 1</h3>
-                  </div>
-                  <div class="panel-body">
-                    <%= link_to "http://kzm.raska.rs", title: 'Канцеларија за младе Рашка', target: '_blank' do %>
-                      <%= image_tag 'kzm-raska.png', class: 'img-responsive' %>
-                    <% end %>
-                  </div>
-                </div><!-- panel -->
+            <div class="col-sm-1 visible-sm"></div><!-- samo za offset u sm velicini -->
+              
+            <div class="col-sm-2 visible-sm"></div><!-- samo za offset u sm velicini -->
+              <div class="col-lg-12 col-md-12 col-sm-4 col-xs-6 raska">
+                <%= link_to "http://kzm.raska.rs", title: 'Канцеларија за младе Рашка', target: '_blank' do %>
+                  <%= image_tag 'kzm-raska.png', class: 'img-responsive' %>
+                <% end %>
               </div><!-- col -->
-            </div><!-- row -->
-           
-            <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 reklama">
-                <div class="panel panel-default">
-                  <div class="panel-heading hidden-sm">
-                    <h3>Реклама 2</h3>
-                  </div>
-                  <div class="panel-body">
-                    <%= link_to "http://acdc-kosovo.org/index.php", target: '_blank', title: 'ACDC-Kosovo' do %>
-                      <%= image_tag 'acdc-logo.png', class: 'img-responsive' %>
-                    <% end %>
-                  </div>
-                </div><!-- panel -->
+
+              <div class="col-lg-12 col-md-12 col-sm-4 col-xs-6 acdc">
+                <%= link_to "http://acdc-kosovo.org/index.php", target: '_blank', title: 'ACDC-Kosovo' do %>
+                  <%= image_tag 'acdc-logo.png', class: 'img-responsive' %>
+                <% end %>
               </div><!-- col -->
-            </div><!-- row -->
-           
+              <div class="col-sm-2 visible-sm"></div><!-- samo za offset u sm velicini -->
+
           </div><!-- col -->
         </aside><!-- side -->
+      
       </div><!-- row -->
     </div><!-- container -->
   </section><!-- news-fun-side -->
+  
   <!-- gallery -->
   <section id="gallery">
     <div class="container">
       <div class="row">
-        <h1>Издвојене фотографије</h1>
+        <h1>Издвојене приче и фотографије</h1>
+
+        <!-- gallery 1 -->
+        <%= link_to '#', title: 'Увећај приказ', data: {toggle: 'modal', target: '#gallery-1-modal'} do %>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
           <div class="thumbnail">
-            <%= image_tag 'basket.jpg', alt: '#', class: 'img-responsive' %>
+            <%= image_tag 'basket.jpg', alt: 'Баскет', class: 'img-responsive' %>
             <div class="thumbnail-caption">
               <h3>Баскет</h3>
-              <p class="hidden-xs">Учесници турнира у баскета</p>
+              <p class="hidden-xs">Учесници турнира у баскету</p>
             </div>
           </div>
-        </div><!-- gallery 1 -->
+        </div><!-- col -->
+        <% end %><!-- gallery 1 -->
+
+        <!-- Modal za Gallery 1 -->
+        <div class="modal fade" id="gallery-1-modal" tabindex="-1" role="dialog" aria-labelledby="GalleryModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                <h3 class="modal-title" id="myModalLabel">Турнир у уличном баскету</h3>
+              </div>
+              <div class="modal-body">
+                <p>Rem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amRem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <%= image_tag 'basket.jpg', alt: 'Баскет', class: 'img-responsive' %>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Затвори</button>
+              </div>
+            </div><!-- modal-content -->
+          </div><!-- modal-dialog -->
+        </div><!-- modal -->
+
+        <!-- gallery 2 -->
+        <%= link_to '#', title: 'Увећај приказ', data: {toggle: 'modal', target: '#gallery-2-modal'} do %>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
           <div class="thumbnail">
             <%= image_tag 'trofeji.jpg', alt: '#', class: 'img-responsive' %>
@@ -159,45 +174,136 @@
               <p class="hidden-xs">Најбољима су уручени трофеји</p>
             </div>  
           </div>
-        </div><!-- gallery 2 -->
+        </div><!-- col -->
+        <% end %><!-- gallery 2 -->
+
+        <!-- Modal za Gallery 2 -->
+        <div class="modal fade" id="gallery-2-modal" tabindex="-1" role="dialog" aria-labelledby="GalleryModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                <h3 class="modal-title" id="myModalLabel">Пехари за победнике</h3>
+              </div>
+              <div class="modal-body">
+                <p>Rem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amRem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <%= image_tag 'trofeji.jpg', alt: 'Пехари', class: 'img-responsive' %>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Затвори</button>
+              </div>
+            </div><!-- modal-content -->
+          </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        
+        <!-- gallery 3 -->
+        <%= link_to '#', title: 'Увећај приказ', data: {toggle: 'modal', target: '#gallery-3-modal'} do %>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
           <div class="thumbnail">
-            <%= image_tag 'medalje.jpg', alt: '#', class: 'img-responsive' %>
+            <%= image_tag 'medalje.jpg', alt: 'Медаље', class: 'img-responsive' %>
             <div class="thumbnail-caption">
               <h3>Медаље</h3>
               <p class="hidden-xs">Медаље за златне момке</p>
-            </div>
+            </div>  
           </div>
-        </div><!-- gallery 3 -->      
-          <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-6">
-            <div class="thumbnail">
-              <%= image_tag 'sastanak.jpg', alt: '#', class: 'img-responsive' %>
-              <div class="thumbnail-caption">
-                <h3>Састанак</h3>
-                <p class="hidden-xs">Састанак за будућност младих :B</p>
+        </div><!-- col -->
+        <% end %><!-- gallery 3 -->
+
+        <!-- Modal za Gallery 3 -->
+        <div class="modal fade" id="gallery-3-modal" tabindex="-1" role="dialog" aria-labelledby="GalleryModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                <h3 class="modal-title" id="myModalLabel">Медаље за најбоље</h3>
               </div>
-            </div>
-          </div><!-- gallery 4 -->        
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-            <div class="thumbnail">
-              <%= image_tag 'tvoj-zivot.jpg', alt: '#', class: 'img-responsive' %>
-              <div class="thumbnail-caption">
-                <h3>Твој живот</h3>
-                <p class="hidden-xs">Твој живот - не знам </p>
+              <div class="modal-body">
+                <p>Rem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amRem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <%= image_tag 'medalje.jpg', alt: 'Медаље', class: 'img-responsive' %>
               </div>
-            </div>
-          </div><!-- gallery 5 -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Затвори</button>
+              </div>
+            </div><!-- modal-content -->
+          </div><!-- modal-dialog -->
+        </div><!-- modal -->    
+        
+        <!-- gallery 4 -->
+        <%= link_to '#', title: 'Увећај приказ', data: {toggle: 'modal', target: '#gallery-4-modal'} do %>
+        <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-6">
+          <div class="thumbnail">
+            <%= image_tag 'sastanak.jpg', alt: 'Састанак организације', class: 'img-responsive' %>
+            <div class="thumbnail-caption">
+              <h3>Састанак</h3>
+              <p class="hidden-xs">Састанак за будућност младих</p>
+            </div>  
+          </div>
+        </div><!-- col -->
+        <% end %><!-- gallery 4 -->
+
+        <!-- Modal za Gallery 4 -->
+        <div class="modal fade" id="gallery-4-modal" tabindex="-1" role="dialog" aria-labelledby="GalleryModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                <h3 class="modal-title" id="myModalLabel">Састанак за будућност младих</h3>
+              </div>
+              <div class="modal-body">
+                <p>Rem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amRem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <%= image_tag 'sastanak.jpg', alt: 'Састанак организације', class: 'img-responsive' %>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Затвори</button>
+              </div>
+            </div><!-- modal-content -->
+          </div><!-- modal-dialog -->
+        </div><!-- modal -->        
+
+        <!-- gallery 5 -->
+        <%= link_to '#', title: 'Увећај приказ', data: {toggle: 'modal', target: '#gallery-5-modal'} do %>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+          <div class="thumbnail">
+            <%= image_tag 'tvoj-zivot.jpg', alt: 'Твој живот', class: 'img-responsive' %>
+            <div class="thumbnail-caption">
+              <h3>Твој живот</h3>
+              <p class="hidden-xs">Твој живот - не знам даље</p>
+            </div>  
+          </div>
+        </div><!-- col -->
+        <% end %><!-- gallery 5 -->
+
+        <!-- Modal za Gallery 5 -->
+        <div class="modal fade" id="gallery-5-modal" tabindex="-1" role="dialog" aria-labelledby="GalleryModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                <h3 class="modal-title" id="myModalLabel">Твој живот</h3>
+              </div>
+              <div class="modal-body">
+                <p>Rem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amRem ipsum dolor sit amet, con, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rem ipsum dolor sit amet, conelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <%= image_tag 'tvoj-zivot.jpg', alt: 'Твој живот', class: 'img-responsive' %>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Затвори</button>
+              </div>
+            </div><!-- modal-content -->
+          </div><!-- modal-dialog -->
+        </div><!-- modal -->   
+        
         </div><!-- row -->
     </div><!-- container -->
   </section><!-- gallery -->
+  
   <section id="map">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="col-lg-8 col-md-8 col-sm-12">
           <div id="map-canvas"></div>
         </div>
         <%= render 'shared/map' %>
-        <div class="col-lg-4 col-md-4 col-sm-4 location">
+        <div class="col-lg-4 col-md-4 col-sm-12 location">
           <div class="panel panel-primary">
             <div class="panel-heading">
               <h1>
