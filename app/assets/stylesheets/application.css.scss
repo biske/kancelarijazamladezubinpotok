@@ -59,6 +59,12 @@ header .nav a,
 .navbar-header span:hover {
     color: #23527c;
 }
+.navbar-header img {
+    width: 100px;
+    height: 58px;
+    padding: 4px 0;
+    margin-left: 25px;
+}
 /* --------- banner --------- */
 .jumbotron {
     padding-top: 80px;
@@ -82,10 +88,6 @@ header .nav a,
     text-align: center;
     font-size: 24px;
 }
-/* --------- news --------- */
-.caption a:hover {
-    text-decoration: underline;
-}
 /* --------- projects --------- */
 .projects, .projects .thumbnail, #gallery .thumbnail {
     background-color: #ebebeb;
@@ -100,6 +102,14 @@ header .nav a,
 }
 .video {
     margin-bottom: 40px;
+}
+.facebook-feed,
+.twitter-feed {
+    width: 100%;
+    text-align: center;
+}
+.facebook-feed {
+    margin: 40px 0;
 }
 /* --------- gallery --------- */
 #gallery {
@@ -146,11 +156,14 @@ header .nav a,
 .about-us,
 .articles,
 .single-article {
-    margin: 80px 0;
+    margin-top: 40px;
 }
 /* --------- news page -------- */
-.articles h2 {
-    padding-bottom: 10px;
+.articles li {
+    padding: 30px 0;
+}
+.articles li:nth-child(2n) {
+    background-color: #ebebeb;
 }
 .articles a:hover {
     text-decoration: none;
@@ -165,7 +178,6 @@ header .nav a,
 .article-body {
     margin: 20px 0;
 }
-
 /* --------- contact page -------- */
 .contact-map {
     margin: 50px 0;
@@ -260,7 +272,7 @@ footer p {
     .date {
         font-size: 12px;
     }
-    #news-fun-side h2 {
+    .title {
         margin-bottom: 10px;
         font-size: 16px;
         font-weight: normal;
@@ -282,7 +294,7 @@ footer p {
     .date {
         font-size: 14px;
     }
-    #news-fun-side h2 {
+    .title {
         font-size: 22px;
     }
     .news {
@@ -312,7 +324,7 @@ footer p {
     #news-fun-side .caption {
         padding: 9px;
     }
-    #news-fun-side h2 {
+    .title {
         font-weight: bold;
     }
     .thumbnail a > img {
@@ -320,6 +332,9 @@ footer p {
     }
     .projects, .projects .thumbnail {
         background-color: #fff;
+    }
+    .articles img {
+        padding-top: 25px;
     }
     footer {
         text-align: left;
@@ -347,7 +362,7 @@ footer p {
     .side {
         margin: 0;
     }
-    .raska {
+    .raska, .acdc {
         margin-bottom: 40px;
     }
     .raska img {
