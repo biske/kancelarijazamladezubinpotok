@@ -53,6 +53,6 @@ class Admin::ArticlesController < Admin::ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body, :bootsy_image_gallery_id)
+      params.require(:article).permit(:title, :body, :bootsy_image_gallery_id, :featured_image)
     end
 end

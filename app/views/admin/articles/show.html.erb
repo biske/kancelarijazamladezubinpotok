@@ -18,5 +18,9 @@
   <%= @article.created_at %>
 </p>
 
+<p>
+  <%= image_tag @article.featured_image.url %>
+</p>
+
 <%= link_to 'Edit', edit_admin_article_path(@article) %> |
 <%= link_to 'Back', admin_articles_path %>
