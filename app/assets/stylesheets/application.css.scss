@@ -35,20 +35,6 @@ h3 a:hover {
 .thumbnail {
     border: none;
 }
-/* --------- logo --------- */
-.logo {
-    margin: 20px 0;
-}
-.logo img {
-    width: 180px;
-    height: 80px;
-    margin: 0 auto;
-    display: block;
-}
-.logo h1 {
-    text-align: center;
-    font-size: 18px;
-}
 /* --------- nav --------- */
 .menu {
     background-color: #0084c4;
@@ -70,7 +56,15 @@ header .nav a,
 .navbar-header span {
     color: #fff;
 }
-
+.navbar-header span:hover {
+    color: #23527c;
+}
+.navbar-header img {
+    width: 100px;
+    height: 58px;
+    padding: 4px 0;
+    margin-left: 25px;
+}
 /* --------- banner --------- */
 .jumbotron {
     padding-top: 80px;
@@ -94,60 +88,35 @@ header .nav a,
     text-align: center;
     font-size: 24px;
 }
-/* --------- news --------- */
-#news-fun-side .thumbnail {
-    padding: 0px;
-    margin: 40px 0;
-    position: relative;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
-}
-#news-fun-side .thumbnail .caption {
-    position: absolute;
-    bottom: 0;
-    color: #fff;  
-}
-#news-fun-side .thumbnail a {
-    color: #fff;
-}
-.caption a:hover {
-    text-decoration: underline;
-}
-.date {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    background-color: rgba(0,0,0,.3);
-}
-#news-fun-side h2 {
-    margin-top: 0;
-    margin-bottom: 10px; 
-}
-.news {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
+/* --------- projects --------- */
+.projects, .projects .thumbnail, #gallery .thumbnail {
+    background-color: #ebebeb;
 }
 /* --------- side --------- */
-aside {
+.side {
     margin: 40px 0;
-}
-.video,
-.reklama, 
-.anketa {
-    width: 80%;
-    margin: 0 auto;
-}
-.gallery-img {
-    margin-top: 20px;
 }
 .side h3 {
     text-align: center;
+    margin-bottom: 20px;
+}
+.video {
+    margin-bottom: 40px;
+}
+.facebook-feed,
+.twitter-feed {
+    width: 100%;
+    text-align: center;
+}
+.facebook-feed {
+    margin: 40px 0;
 }
 /* --------- gallery --------- */
 #gallery {
-    margin: 80px 0;
+    margin: 40px 0;
+    padding: 40px 0;
     text-align: center;
+    background-color: #ebebeb;
 }
 #gallery h1 {
     margin-bottom: 40px;
@@ -155,7 +124,19 @@ aside {
 #gallery h3 {
     margin: 10px 0;
 }
+#gallery .thumbnail img {
+    border-radius: 5px;
+}
+.modal-body p {
+    text-align: left;
+}
+.modal-body .img-responsive {
+    display: inline-block;
+}
 /* --------- map --------- */
+#map {
+    margin: 80px 0;
+}
 #map-canvas {
     width: 100%;
     height: 400px;
@@ -175,11 +156,14 @@ aside {
 .about-us,
 .articles,
 .single-article {
-    margin: 80px 0;
+    margin-top: 40px;
 }
 /* --------- news page -------- */
-.articles h2 {
-    padding-bottom: 10px;
+.articles li {
+    padding: 30px 0;
+}
+.articles li:nth-child(2n) {
+    background-color: #ebebeb;
 }
 .articles a:hover {
     text-decoration: none;
@@ -194,7 +178,6 @@ aside {
 .article-body {
     margin: 20px 0;
 }
-
 /* --------- contact page -------- */
 .contact-map {
     margin: 50px 0;
@@ -210,7 +193,7 @@ aside {
 /* --------- footer --------- */
 footer {
     padding: 100px 0 80px;
-    margin-top: 80px;
+    margin-top: 60px;
     text-align: center;
     background-color: #0084c4;
     color: #fff;
@@ -266,17 +249,68 @@ footer p {
     background-color: rgba(0,0,0,.5);
 }
 /* --------- media queries --------- */
-
+/* Custom, exstra small mobile phones */ 
+@media only screen and (min-width : 320px) {
+    .logo {
+        margin: 20px auto;
+        width: 70%;
+        height: 70%;
+    }
+    .logo h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+    #news-fun-side .caption {
+        padding: 0;
+    }
+    .news {
+        font-weight: bold;
+        font-size: 12px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .date {
+        font-size: 12px;
+    }
+    .title {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    #news-fun-side .thumbnail {
+        margin: 40px 0;
+    }
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    .logo {
+        margin: 20px auto;
+        width: 50%;
+        height: 50%;
+    }
+    .logo h1 {
+        font-size: 26px;
+    }
+    .date {
+        font-size: 14px;
+    }
+    .title {
+        font-size: 22px;
+    }
+    .news {
+        font-size: 14px;
+    }
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .logo img {
-        width: 350px;
-        height: 180px;
-        margin: 0;
+    .logo {
+        width: 100%;
+        height: auto;
     }
     .logo h1 {
         font-size: 36px;
         padding-top: 40px;
+        text-align: left;
     }
     .nav li {
         line-height: 65px;
@@ -284,15 +318,23 @@ footer p {
     #main-mssg h1 {
         padding-top: 30px;
     }
-    .video,
-    .reklama,
-    .anketa {
-        width: 100%;
+    #news-fun-side .thumbnail {
         margin: 0;
     }
-    .location {
-        margin-top: 0;
-        text-align: left;
+    #news-fun-side .caption {
+        padding: 9px;
+    }
+    .title {
+        font-weight: bold;
+    }
+    .thumbnail a > img {
+        padding: 0 6px 12px;
+    }
+    .projects, .projects .thumbnail {
+        background-color: #fff;
+    }
+    .articles img {
+        padding-top: 25px;
     }
     footer {
         text-align: left;
@@ -307,7 +349,6 @@ footer p {
     .logo h1 {
         margin: 0;
         font-size: 42px;
-        text-align: left;
         padding-top: 0;
         line-height: 180px;
     }
@@ -317,6 +358,19 @@ footer p {
     }
     #news-fun-side h1 {
         font-size: 36px;
+    }
+    .side {
+        margin: 0;
+    }
+    .raska, .acdc {
+        margin-bottom: 40px;
+    }
+    .raska img {
+        margin: 0 auto;
+    }
+    .location {
+        margin-top: 0;
+        text-align: left;
     }
 }/* end of desktops styles */
 

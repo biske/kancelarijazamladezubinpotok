@@ -4,20 +4,30 @@
       
       <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
         <article class="sponzors">
-          <h3><span class="glyphicon glyphicon-ok"></span> &nbsp; Спонзори и донације</h3>
+          <h3><span class="glyphicon glyphicon-ok"></span> &nbsp; Партнери</h3>
             <div class="row">
+              <div class="col-xs-1 visible-xs"></div><div class="col-xs-1 visible-xs"></div><!-- 2 diva samo za offset u xs velicini -->
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                <%= link_to "https://www.ndi.org/kosovo", target: '_blank', title: 'NDI - Kosovo' do %>
-                  <%= image_tag 'ndi-logo.png', class: 'img-responsive' %>
+                <%= link_to "https://www.facebook.com/udruzenjemladih.putokaz", target: '_blank', title: 'Удружење младих Путоказ' do %>
+                  <%= image_tag 'putokaz-logo.png', class: 'img-responsive' %>
                 <% end %>
-              </div>
+              </div><!-- col -->
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <%= link_to "http://www.ngoaktiv.org/", target: '_blank', title: 'НВО Актив' do %>
+                  <%= image_tag 'aktiv-logo.png', class: 'img-responsive' %>
+                <% end %>
+              </div><!-- col -->
               </div><!-- row -->
         </article><!-- sponzors -->
       </div><!-- col -->
 
       <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
         <article class="contact">
-          <h3><a href="#" title="Контакт подаци"><span class="glyphicon glyphicon-phone-alt"></span> &nbsp; Контакт</a></h3>
+          <h3><%= link_to kontakt_path do %>
+                  <span class="glyphicon glyphicon-phone-alt"></span>
+                  Контакт
+                <% end %>
+          </h3>
           <ul>
             <li>+38164 9683134</li>
             <li><a href="mailto:mladizubinpotok@gmail.com">mladizubinpotok@gmail.com</a></li>
