@@ -19,8 +19,8 @@
 					        </div><!-- col -->
 							<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
 					      		<%= link_to article_path(article), title: 'Прочитај вест'  do %>
-					      	 		<%= image_tag 'slika-2.jpg', alt: '#', class: 'img-responsive' %>
-				      	 	    <% end %>
+					      	 		<%= image_tag article.featured_image.url, alt: '#', class: 'img-responsive' %>
+				      	 	  <% end %>
 				      	 	</div><!-- col -->
 					     </li>
 					<% end %>
