@@ -37,7 +37,7 @@
               <div class="thumbnail">
                 <p class="date"><%= article.created_at %></p>
                	<%= link_to article_path(article) do %>
-                  <%= image_tag 'slika-4.jpg' %>
+                  <%= image_tag article.featured_image.url %>
                 <% end %>
                 <div class="caption">
 	                <p class="news"><%= link_to "Вести", articles_path %></p>
