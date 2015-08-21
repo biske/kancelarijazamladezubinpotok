@@ -4,6 +4,10 @@
 </p>
 
 <p>
+  <%= image_tag @article.featured_image.url %>
+</p>
+
+<p>
   <strong>Тело:</strong>
   <%= raw(@article.body) %>
 </p>
@@ -16,10 +20,6 @@
 <p>
   <strong>Направљено:</strong>
   <%= @article.created_at %>
-</p>
-
-<p>
-  <%= image_tag @article.featured_image.url %>
 </p>
 
 <%= link_to 'Edit', edit_admin_article_path(@article) %> |
