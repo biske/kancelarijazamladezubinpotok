@@ -1,13 +1,12 @@
 <section id="single-article-page">
 	<div class="container">
-	    <div class="row">
-	    	
-	    	<article class="single-article">
-		    	<div class="col-lg-7 col-md-7 col-sm-12">
+	  <div class="row">	
+    	<article class="single-article">
+	    	<div class="col-lg-7 col-md-7 col-sm-12">
 					<h2 class="article-title"><%= @article.title %></h2>
 					<p class="article-author"><%= @article.user.email %> | <%= @article.created_at %></p>
-					<%= image_tag 'slika-2.jpg', alt: '#', class: 'img-responsive' %>      	
-					<p class="article-body"><%= raw(@article.body) %></p>
+					<div><%= image_tag @article.featured_image.url %></div>
+					<div class="article-body"><%= raw(@article.body) %></div>
 					<%= link_to articles_path, class: 'btn btn-primary' do %><span class="glyphicon glyphicon-chevron-left"></span> Све вести<% end %>
 				</div><!-- col -->
 			</article><!-- single-article -->
@@ -64,7 +63,6 @@
 
         </div><!-- col -->
       </aside><!-- side -->
-
     </div><!-- row -->
   </div><!-- container -->
 </section><!-- news-page -->
